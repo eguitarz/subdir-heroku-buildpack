@@ -12,8 +12,7 @@ echo "compiling $BUILD_DIR, $CACHE_DIR, $ENV_DIR"
 if [ -f $ENV_DIR/PROJECT_PATH ]; then
 	PROJECT_PATH=`cat $ENV_DIR/PROJECT_PATH`
 	echo "project path: $PROJECT_PATH"
-	ls -al $BUILD_DIR/$PROJECT_PATH
-	if [ -d $BUILD_DIR/PROJECT_PATH ]; then
+	if [ -d $BUILD_DIR/$PROJECT_PATH ]; then
 		echo "-----> Subdir buildpack in $PROJECT_PATH"
 		echo "       creating cache: $CACHE_DIR"
 		mkdir -p $CACHE_DIR
